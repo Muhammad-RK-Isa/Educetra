@@ -45,4 +45,3 @@ const closeNavMenu = (e) => {
 
 closeMenuBtn.addEventListener('click', closeNavMenu);
 
-header.addEventListener('click', closeNavMenu);

@@ -330,8 +330,10 @@ header{
     }
     .nav__menu li a:hover{
         border: var(--color-white) solid 2px;
-        background-color: transparent;
+        filter: blur(8px);
+        -webkit-filter: blur(8px);
         color: var(--color-white);
+
     }
 
     @keyframes animateNavItems {
