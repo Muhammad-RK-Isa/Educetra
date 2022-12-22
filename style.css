@@ -279,7 +279,7 @@ header{
     gap: 1rem;
     cursor: pointer;
     background-color: var(--color-primary);
-    padding: 2rem;
+    padding: 1.2rem;
 }
 
 
@@ -296,9 +296,18 @@ header{
 
 .faq .show__answer{
     display: block;
+    background-color: transparent;
 }
+
+.expanded__faq{
+    background-color: transparent;
+    border: solid;
+    transition: var(--transition);
+}
+
 .icon{
     align-self: flex-start;
+    font-size: 1.5rem;
 }
 .minus__icon{
     align-self: flex-start;
@@ -376,8 +385,7 @@ header{
     }
     .nav__menu li a:hover{
         border: var(--color-white) solid 2px;
-        filter: blur(8px);
-        -webkit-filter: blur(8px);
+        background-color: transparent;
         color: var(--color-white);
 
     }
@@ -391,11 +399,26 @@ header{
             transform: translate(0rem);
         }
     }
+
+    /* ==========================Catagories======================== */
+
+    .categories{
+        height: auto;
+    }
+
+    .categories__container{
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .categories__left{
+        margin-right: 0;
+    }
 }
 
 /* ==============================Media Query for mobile devices===================================== */
 
-/* @media screen and (max-width: 480px) {
+@media screen and (max-width: 480px) {
     .container{
         width: var(--container-width-sm);
     }
@@ -417,10 +440,14 @@ header{
     .header__left p {
         margin-bottom: 1.3rem;
     }
-
+/* ===================================categories======================== */
+    .categories{
+        margin-bottom: 1rem;
+    }
     .categories__right{
         grid-template-columns: 1fr 1fr;
         gap: 0.7rem;
+        box-sizing: border-box;
     }
     .category{
         padding: 1rem;
@@ -430,4 +457,10 @@ header{
         margin-top: 4px;
         display: inline-block;
     }
-} */
+
+    /* ======================FAQ============================ */
+    .faq__container{
+        grid-template-columns: 1fr;
+        gap: .5rem;
+    }
+}

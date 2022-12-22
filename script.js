@@ -71,6 +71,7 @@ const faqs = document.querySelectorAll('.faq');
 
 faqs.forEach(faq => {
     faq.addEventListener('click', () => {
+        faq.classList.toggle('expanded__faq')
         const answer = faq.getElementsByClassName('answer')[0];
         answer.classList.toggle('show__answer');
 
