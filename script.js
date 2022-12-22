@@ -17,10 +17,8 @@ const NavBtnToggler = x => {
     if (x.matches) {
         openMenuBtn.style.display = 'inline-block';
         navMenu.style.display = 'none';
-        console.log(`It's 600px or less`)
     }
     else {
-        console.log(`It's higher than 600px`);
         openMenuBtn.style.display = 'none';
         closeMenuBtn.style.display = 'none';
         navMenu.style.display = 'flex';
@@ -44,4 +42,48 @@ const closeNavMenu = (e) => {
 };
 
 closeMenuBtn.addEventListener('click', closeNavMenu);
+
+
+
+// ======================================================FAQ========================+-+-+-
+
+// const faqArticles = () => {
+//     const faqs = document.getElementsByClassName('faq');
+//     for (let i = 0; i < faqs.length; i++) {
+//         const faq = faqs[i];
+//         faq.addEventListener('click', expandFaq);
+//     };
+// };
+
+// const expandFaq = (e) => {
+//     individualFaq = e.target;
+//     const answer = individualFaq.getElementsByClassName('answer')[0];
+    // const minusBtn = individualFaq.getElementsByClassName('minus__icon')[0];
+    // const plusBtn = individualFaq.getElementsByClassName('plus__icon')[0];
+    // minusBtn.style.display = 'inline-block'
+    // plusBtn.style.display = 'none'
+//     answer.style.display = 'block';
+// };
+
+// faqArticles();
+
+const faqs = document.querySelectorAll('.faq');
+
+faqs.forEach(faq => {
+    faq.addEventListener('click', () => {
+        const answer = faq.getElementsByClassName('answer')[0];
+        answer.classList.toggle('show__answer');
+
+        //toggle plus and minus icon
+        const icon = faq.querySelector('.icon i');
+        if(icon.className === 'uil uil-plus'){
+            icon.className = 'uil uil-minus';
+            console.log(icon)
+        }
+        else{
+            icon.className = 'uil uil-plus';
+        };
+    });
+});
+
 

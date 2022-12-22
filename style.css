@@ -184,6 +184,7 @@ header{
 /* ===================================================================Catagories================================================================= */
 
 .categories{
+    margin-bottom: 10rem;
     background-color: var(--color-bg1);
     height: 20rem;
 }
@@ -258,6 +259,51 @@ header{
     font-size: 0.85rem;
 }
 
+/* ========================================================================FAQ==================================================================== */
+
+.faqs{
+    background-color: var(--color-bg1);
+    box-shadow: inset 0 0 3rem rgba(0, 0, 0, 0.5);
+}
+
+.faq__container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.faq{
+    display: flex;
+    align-items: center;
+    height: fit-content;
+    gap: 1rem;
+    cursor: pointer;
+    background-color: var(--color-primary);
+    padding: 2rem;
+}
+
+
+.faq h4{
+    line-height: 1.2rem;
+}
+
+
+.faq p{
+    margin-top: 1rem;
+    line-height: 1.8rem;
+    display: none;
+}
+
+.faq .show__answer{
+    display: block;
+}
+.icon{
+    align-self: flex-start;
+}
+.minus__icon{
+    align-self: flex-start;
+    display: none;
+}
 /* ===================================Media Query for tablet devices================================= */
 
 @media screen and (max-width: 1024px) {
